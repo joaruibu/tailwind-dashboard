@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba front-end (TailwindCSS)</title>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    backgroundImage: {
+                        'user': "url('/assets/users/img_user.png')",
+                    },
+                    colors: {
+                        'neutral-100': '#FFFFFF',
+                        'neutral-200': '#F4F6FC',
+                        'neutral-300': '#B0B7C4',
+                        'neutral-400': '#333B51',
+                        'neutral-500': '#1A233A',
+                        'primary-100': '#B693FB',
+                        'primary-200': '#6B6FFA',
+                        'primary-300': '#4D73FA',
+                    },
+                    fontFamily: {
+                        'Monsterrat': ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }</script>
+</head>
+
+<body class="bg-neutral-200 font-Monsterrat dark:bg-neutral-500">
+    <header class="p-3  lg:p-7 lg:pr-24 lg:pl-24 bg-neutral-100 flex justify-between dark:bg-neutral-500 ">
+        <div class="flex justify-between items-center">
+            <img src="/assets/logo/logo.png" alt="Logo NuexeWind">
+            <h1 class="text-xl pl-3 font-semibold sm:text-2xl dark:text-neutral-100">Nuexe<span
+                    class="text-primary-100">Wind</span>
+            </h1>
+        </div>
+        <div class="flex justify-between items-center">
+            <div class=" hidden  sm:inline text-right mr-5 justify-items-center">
+                <p class="text-lg dark:text-neutral-100">Rafael Perez</p>
+                <p class=" text-neutral-300">Admin</p>
+            </div>
+            <div class="h-12 w-12 rounded-full bg-user bg-cover bg-center">
+            </div>
+        </div>
+
+    </header>
+    <nav
+        class="flex justify-between p-3  lg:p-7 lg:pr-24 lg:pl-24  bg-primary-200 p-6 text-neutral-100 dark:bg-neutral-400">
+        <ul class="flex">
+            <li>
+                <a href="#" class="flex pr-9 hover:text-neutral-300 ease-in duration-200">
+                    <span class="material-symbols-outlined">other_houses</span>
+                    <p class="hidden  md:inline pl-2 underline underline-offset-1">Dashboard</p>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="#" class="flex pr-9 hover:text-neutral-300 ease-in duration-200">
+                    <span class="material-symbols-outlined">grid_view</span>
+                    <p class="hidden  md:inline pl-2 ">Components</p>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="#" class="flex pr-9 hover:text-neutral-300 ease-in duration-200">
+                    <span class="material-symbols-outlined">edit_note</span>
+                    <p class="hidden  md:inline pl-2 ">Forms</p>
+                </a>
+
+            </li>
+            <li>
+                <a href="#" class="flex pr-9 hover:text-neutral-300 ease-in duration-200">
+                    <span class="material-symbols-outlined">lock_person</span>
+                    <p class="hidden  md:inline pl-2 ">Authentication</p>
+                </a>
+
+            </li>
+
+        </ul>
+        <button id="toggle-theme">
+            <span class="material-symbols-outlined dark:hidden">
+                dark_mode
+            </span>
+            <span class="material-symbols-outlined hidden dark:inline">
+                light_mode
+            </span>
+        </button>
+
+
+
+
+
+    </nav>
+
+    <div class="p-3  lg:p-7 lg:pr-24 lg:pl-24 ">
+        <p class="text-xl sm:text-2xl text-neutral-400 mt-5 dark:text-neutral-100">Dashboard</p>
+        <p class="text-sm sm:text-base text-neutral-300">Welcome back, Rafael</p>
+    </div>
+
+    <article class="p-3 lg:pr-24 lg:pl-24  lg:space-x-10 lg:flex ">
+        <div class=" lg:w-1/2">
+            <section class=" flex space-x-2 sm:space-x-5 lg:space-x-10 ">
+
+                <div
+                    class="w-1/2 p-3 bg-neutral-100 shadow-md rounded-sm transition duration-300 hover:shadow-xl hover:scale-102 lg:p-5 dark:bg-neutral-400 dark:hover:shadow-xl">
+                    <p class="text-xs text-neutral-300  lg:text-base">TODAY REVENUE</p>
+                    <p class="text-3xl mt-3 text-neutral-400 font-medium lg:mt-6 lg:text-4xl dark:text-neutral-100">$
+                        4,096</p>
+                    <p class="text-red-600 mt-3">↘ <span class="ml-3">-32% </span> </p>
+                </div>
+
+                <div
+                    class="w-1/2 p-3 bg-neutral-100 shadow-md rounded-sm transition duration-300 hover:shadow-xl hover:scale-102 lg:p-5 dark:bg-neutral-400">
+                    <p class="text-xs text-neutral-300  lg:text-base">TODAY CUSTOMERS</p>
+                    <p class="text-3xl mt-3 text-neutral-400 font-medium lg:mt-6 lg:text-4xl dark:text-neutral-100">185
+                        <span class="text-sm lg:text-xl">customer</span>
+                    </p>
+                    <p class="text-green-500 mt-3">↗ <span class="ml-3">+50% </span> </p>
+                </div>
+
+            </section>
+
+            <section
+                class="flex-column p-3 pt-5 mt-5 space-x-2 bg-neutral-100 shadow-md rounded-sm duration-300 hover:shadow-xl hover:scale-102 sm:space-x-5  md:flex md:items-center lg:space-x-10 lg:flex-column lg:mt-10 lg:p-5 dark:bg-neutral-400">
+                <div class="md:w-1/2">
+                    <canvas id="chart-1" role="img"> </canvas>
+                </div>
+                <div class="md:w-1/2 self-center">
+                    <p class="text-xl text-neutral-400 pb-5 lg:text-2xl dark:text-neutral-100">Welcome to Nuxewind</p>
+                    <p class="text-neutral-300 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                        do eiusmod tempor incididunt ut,consectetur adipiscing elit, sed
+                        do eiusmod tempor ut.</p>
+
+            </section>
+        </div>
+        <section
+            class=" p-3 pt-5 mt-5 bg-neutral-100 shadow-md rounded-sm transition duration-300 hover:shadow-xl hover:scale-102 lg:mt-0 lg:p-5 lg:w-1/2 lg:h-auto dark:bg-neutral-400 dark:hover:scale-102 ">
+            <p class="text-xs text-neutral-300 mb-3 lg:mb-6  lg:text-base">LAST 3 DAYS SALES</p>
+            <canvas id="chart-2" role="img"> </canvas>
+        </section>
+    </article>
+
+    <script>
+        const htmlElement = document.querySelector('html');
+        const toggleButton = document.querySelector('#toggle-theme');
+
+        toggleButton.addEventListener('click', () => toggleDarkMode())
+
+        const toggleDarkMode = () => {
+            htmlElement.classList.contains('dark') ?
+                htmlElement.classList.remove('dark') :
+                htmlElement.classList.add('dark')
+        }
+    </script>
+    <script src="/chart.js"></script>
+
+</body>
+
+</html>
